@@ -19,3 +19,10 @@ CREATE TABLE workouts (
   user_ID INTEGER REFERENCES
       users(id)
 );
+
+-- CREATE TABLE groups (
+--   id BIGSERIAL PRIMARY KEY,
+--   post VARCHAR(255),
+--   content VARCHAR(225),
+--
+-- )
