@@ -107,6 +107,7 @@ app.delete(
     Workouts.delete(id).then(deleteTask => {
       response.render("edit", { deleteTask });
     });
+    response.redirect(`/fritters/:id/workouts`);
   }
 );
 // app.post("/fritters");

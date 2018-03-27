@@ -4,7 +4,7 @@
     <% data.forEach((dta => {%>
       <h1 class="hMain"><%= dta.title %></h1>
       <p class="wp"><%= dta.content %></p>
-      <a href="./workouts/<%= dta.id %>/edit"><button type="button" name="button">Edit</button></a>
+      <a href="workouts/<%= dta.id %>/edit"><button type="button" name="button">Edit</button></a>
       <%}))%>
   </body>
 </html>
