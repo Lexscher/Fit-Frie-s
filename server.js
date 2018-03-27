@@ -58,6 +58,9 @@ app.get("/fritters", (request, response) => {
   });
 });
 
+app.get("/gyms", (request, response) => {
+  response.render("gymdex");
+});
 // This page should show you the specific user.
 app.get("/fritters/:id", (request, response) => {
   const id = Number(request.params.id);
