@@ -1,0 +1,14 @@
+<% include ../partial/header %>
+  <body>
+    <header>
+        <h1>Feel free to browse through all the fritters!</h1>
+    </header>
+    <div class="homeContainer">
+
+        <% data.forEach((dataU) => {%>
+          <a href="./<%= dataU.id %>" class="fritLink"><p class="np"><%= dataU.username %></p></a>
+        <%})%>
+
+    </div>
+  </body>
+</html>

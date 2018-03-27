@@ -1,0 +1,78 @@
+/* Mobile size */
+body {
+  background-color: rgba(32, 178, 180, 1);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+}
+
+button {
+}
+
+div,
+form {
+  background-color: rgba(48, 78, 80, 1);
+  margin: 0 auto;
+  padding: 12px;
+}
+
+h1 {
+  font-size: 22px;
+}
+h2 {
+  font-size: 20px;
+}
+
+.hMain {
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.hProfile {
+  font-family: "Rye", cursive;
+}
+
+.toUser {
+  font-family: "Rye", cursive;
+}
+
+.hMessage {
+  font-family: "Alex Brush", cursive;
+}
+
+.np {
+  font-family: "Padauk", sans-serif;
+}
+
+.wp {
+  font-family: "Roboto Mono", monospace;
+}
+
+.homeContainer,
+.formContainer {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.formInput1 {
+}
+
+.wholeUserPage,
+.userHeader,
+.addNewPost,
+.userBody {
+  display: flex;
+  flex-direction: column;
+}
+
+.fritLink {
+  text-decoration: none;
+  font-size: 25px;
+}
+
+.fullWorkout {
+  margin: 12px, auto;
+}
+/* desktop size */
