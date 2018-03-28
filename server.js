@@ -7,7 +7,7 @@ const workoutController = require("./controllers/workoutController");
 // call the express function.
 const app = express();
 // set the port you're going to listen to.
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 // require the body parser!
 const bodyParser = require("body-parser");
 // get your models in here, man!
