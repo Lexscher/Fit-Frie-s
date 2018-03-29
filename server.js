@@ -75,6 +75,25 @@ app.get("/fritters/:id/workouts", (request, response) => {
   });
 });
 
+// app.get("/fritters/:id", urlencodedParser, (request, response) => {
+//   const data = request.body;
+//   const id = Number(request.params.id);
+//   Workouts.findAll(data).then(task => {
+//     task = {
+//       task: data
+//     };
+//     response.render("profile", { task });
+//   });
+// });
+
+app.post("fritters/:id/workouts", urlencodedParser, (request, response) => {
+  const data = request.body;
+  const id = Number(request.params.id);
+  Workouts.create(data).then(task => {
+    response.redirect("/fritters/");
+  });
+});
+
 app.get("/fritters/:id/workouts/:id", (request, response) => {
   const id = Number(request.params.id);
   Workouts.findOne(id).then(data => {
@@ -96,9 +115,10 @@ app.get(
 app.put("/fritters/:id/workouts/:id", urlencodedParser, (request, response) => {
   const data = request.body;
   const id = Number(request.params.id);
-  Workouts.edit(data, id).then(task => {
-    response.redirect(`/fritters/:id/workouts/${task.id}`);
+  Workouts.edit(data, id).then((dataID, task) => {
+    response.render("edit", { dataID, task });
   });
+  response.redirect(`/fritters/:id/workouts`);
 });
 
 app.delete(

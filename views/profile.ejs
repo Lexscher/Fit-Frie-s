@@ -13,6 +13,14 @@
 
     <div class="userBody">
       <a href="/fritters/:id/workouts"><h1 class="hMessage">Workouts!</h> </a>
+
+        <div class="formContainer">
+          <form class="" action="/fritters/<%= fritterData.id %>/workouts" method="post">
+            <input type="text" name="title" value="">
+            <input type="text" name="content" value="">
+            <button type="submit" name="button"> Post Your Workout! </button>
+          </form>
+        </div>
     </div>
     <div class="favGym">
 

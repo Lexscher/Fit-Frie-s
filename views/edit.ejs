@@ -6,7 +6,7 @@
 <form class="formContainer" action="/fritters/:id/workouts/<%= task.id %>?_method=PUT" method="post">
   <input type="text" name="" placeholder="New Workout Name" value="<% task.title %>">
   <input type="text" name="" placeholder="New Workout Content" value="<% task.content %>">
-  <button class="submit" name="submit" class="btn btn-success">Submit</button>
+  <button class="submit" action="/fritters/:id/workouts" name="submit" class="btn btn-success">Submit</button>
 </form>
 <form method="POST" action="/fritters/:id/workouts/<%= task.id %>?_method=DELETE">
   <button type="submit">Delete task</button>

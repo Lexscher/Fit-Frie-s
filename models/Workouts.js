@@ -12,10 +12,10 @@ Workouts.findOne = id => db.one("SELECT * FROM workouts WHERE id = $1", [id]);
 
 // Create your workout
 Workouts.create = data =>
-  db.one("INSERT INTO workouts (title, content) VALUES ($1, $2) RETURNING id", [
-    data.title,
-    data.content
-  ]);
+  db.one(
+    "INSERT INTO workouts (title, content) VALUES ($1, $2) RETURNNING id",
+    [data.title, data.content]
+  );
 
 // edit your workout
 Workouts.edit = (data, id) =>
