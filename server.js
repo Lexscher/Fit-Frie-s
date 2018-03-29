@@ -32,15 +32,15 @@ const bcrypt = require("bcrypt");
 const salt = "$2a$10$1fFhZQ4.4k0135ZaigTDSO";
 
 // show the home page! The user should be able to decide if they want to log in or make a new account.
-app.get("/home", (request, response) => {
+app.get("/", (request, response) => {
   response.render("home");
 });
 // the user will go to this route to sign up.
-app.get("/home/signup", (request, response) => {
+app.get("/signup", (request, response) => {
   response.render("signup");
 });
 // the user will go to this route to log in.
-app.get("/home/login", (request, response) => {
+app.get("/login", (request, response) => {
   response.render("login");
 });
 
@@ -88,7 +88,9 @@ app.get("/fritters/:id/workouts", (request, response) => {
 
 app.post("fritters/:id/workouts", urlencodedParser, (request, response) => {
   const data = request.body;
+  console.log(data);
   const id = Number(request.params.id);
+  console.log(id);
   Workouts.create(data).then(task => {
     response.redirect("/fritters/");
   });
