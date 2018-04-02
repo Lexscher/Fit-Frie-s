@@ -11,6 +11,10 @@ body {
 button {
 }
 
+a {
+  color: #fff;
+}
+
 div,
 form {
   background-color: rgba(48, 78, 80, 1);

@@ -86,14 +86,14 @@ app.get("/fritters/:id/workouts", (request, response) => {
 //   });
 // });
 
-app.post("fritters/:id/workouts", urlencodedParser, (request, response) => {
+app.post("fritters/:id/", urlencodedParser, (request, response) => {
   const data = request.body;
   console.log(data);
   const id = Number(request.params.id);
   console.log(id);
-  Workouts.create(data).then(task => {
-    response.redirect("/fritters/");
-  });
+  // Workouts.create(data).then(task => {
+  //   response.redirect("/fritters/");
+  // });
 });
 
 app.get("/fritters/:id/workouts/:id", (request, response) => {

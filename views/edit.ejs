@@ -4,8 +4,8 @@
     <h1 class="hMessage">Edit, here~</h1>
 
 <form class="formContainer" action="/fritters/:id/workouts/<%= task.id %>?_method=PUT" method="post">
-  <input type="text" name="" placeholder="New Workout Name" value="<% task.title %>">
-  <input type="text" name="" placeholder="New Workout Content" value="<% task.content %>">
+  <input type="text" name="title" placeholder="New Workout Name" value="<% task.title %>">
+  <input type="text" name="content" placeholder="New Workout Content" value="<% task.content %>">
   <button class="submit" action="/fritters/:id/workouts" name="submit" class="btn btn-success">Submit</button>
 </form>
 <form method="POST" action="/fritters/:id/workouts/<%= task.id %>?_method=DELETE">
